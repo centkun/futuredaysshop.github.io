@@ -1,0 +1,386 @@
+@for $i from 0 through 32 {
+  $ii: 0;
+  $iii: $i * 0.5;
+  @if $i == 0 {
+    $ii: 0;
+    $iii: 0;
+  } @else if $i == 1 {
+    $ii: 0_5;
+    $iii: 0.5;
+  } @else if $i % 2 == 0 {
+    $ii: calc($i / 2);
+  } @else {
+    $ii: #{floor(calc($i / 2))}_5;
+  }
+  .row-#{$ii}{
+    padding-top: #{$iii}rem;
+    &:first-child,
+    &.is-row-no-top{
+      padding-top: 0;
+    }
+    &.is-row-top{
+      padding-top: #{$iii}rem;
+    }
+  }
+  .row-#{$ii}-pc-small{
+    @include breakpoint(pc-small){
+      padding-top: #{$iii}rem;
+    }
+    &:first-child,
+    &.is-row-no-top-pc-small{
+      @include breakpoint(pc-small){
+        padding-top: 0;
+      }
+    }
+    &.is-row-top-pc-small{
+      @include breakpoint(pc-small){
+        padding-top: #{$iii}rem;
+      }
+    }
+  }
+  .row-#{$ii}-tablet{
+    @include breakpoint(tablet){
+      padding-top: #{$iii}rem;
+    }
+    &:first-child,
+    &.is-row-no-top-tablet{
+      @include breakpoint(tablet){
+        padding-top: 0;
+      }
+    }
+    &.is-row-top-tablet{
+      @include breakpoint(tablet){
+        padding-top: #{$iii}rem;
+      }
+    }
+  }
+  .row-#{$ii}-sp{
+    @include breakpoint(smartphone){
+      padding-top: #{$iii}rem;
+    }
+    &:first-child,
+    &.is-row-no-top-sp{
+      @include breakpoint(smartphone){
+        padding-top: 0;
+      }
+    }
+    &.is-row-top-sp{
+      @include breakpoint(smartphone){
+        padding-top: #{$iii}rem;
+      }
+    }
+  }
+  .rowm-#{$ii}{
+    margin-top: #{$iii}rem;
+    &:first-child,
+    &.is-rowm-no-top{
+      margin-top: 0;
+    }
+    &.is-rowm-top{
+      margin-top: #{$iii}rem;
+    }
+  }
+  .rowm-#{$ii}-pc-small{
+    @include breakpoint(pc-small){
+      margin-top: #{$iii}rem;
+    }
+    &:first-child,
+    &.is-rowm-no-top-pc-small{
+      @include breakpoint(pc-small){
+        margin-top: 0;
+      }
+    }
+    &.is-rowm-top-pc-small{
+      @include breakpoint(pc-small){
+        margin-top: #{$iii}rem;
+      }
+    }
+  }
+  .rowm-#{$ii}-tablet{
+    @include breakpoint(tablet){
+      margin-top: #{$iii}rem;
+    }
+    &:first-child,
+    &.is-rowm-no-top-tablet{
+      @include breakpoint(tablet){
+        margin-top: 0;
+      }
+    }
+    &.is-rowm-top-tablet{
+      @include breakpoint(tablet){
+        margin-top: #{$iii}rem;
+      }
+    }
+  }
+  .rowm-#{$ii}-sp{
+    @include breakpoint(smartphone){
+      margin-top: #{$iii}rem;
+    }
+    &:first-child,
+    &.is-rowm-no-top-sp{
+      @include breakpoint(smartphone){
+        margin-top: 0;
+      }
+    }
+    &.is-rowm-top-sp{
+      @include breakpoint(smartphone){
+        margin-top: #{$iii}rem;
+      }
+    }
+  }
+  .col-#{$ii}{
+    padding-right: #{$iii}rem;
+    &:last-child{
+      padding-right: 0;
+    }
+  }
+  .col-#{$ii}-pc-small{
+    @include breakpoint(pc-small){
+      padding-right: #{$iii}rem;
+    }
+    &:last-child{
+      @include breakpoint(pc-small){
+        padding-right: 0;
+      }
+    }
+  }
+  .col-#{$ii}-tablet{
+    @include breakpoint(tablet){
+      padding-right: #{$iii}rem;
+    }
+    &:last-child{
+      @include breakpoint(tablet){
+        padding-right: 0;
+      }
+    }
+  }
+  .col-#{$ii}-sp{
+    @include breakpoint(smartphone){
+      padding-right: #{$iii}rem;
+    }
+    &:last-child{
+      @include breakpoint(smartphone){
+        padding-right: 0;
+      }
+    }
+  }
+  .colm-#{$ii}{
+    margin-right: #{$iii}rem;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  .colm-#{$ii}-pc-small{
+    @include breakpoint(pc-small){
+      margin-right: #{$iii}rem;
+    }
+    &:last-child{
+      @include breakpoint(pc-small){
+        margin-right: 0;
+      }
+    }
+  }
+  .colm-#{$ii}-tablet{
+    @include breakpoint(tablet){
+      margin-right: #{$iii}rem;
+    }
+    &:last-child{
+      @include breakpoint(tablet){
+        margin-right: 0;
+      }
+    }
+  }
+  .colm-#{$ii}-sp{
+    @include breakpoint(smartphone){
+      margin-right: #{$iii}rem;
+    }
+    &:last-child{
+      @include breakpoint(smartphone){
+        margin-right: 0;
+      }
+    }
+  }
+  .pt-#{$ii}{
+    padding-top: #{$iii}rem;
+  }
+  .pb-#{$ii}{
+    padding-bottom: #{$iii}rem;
+  }
+  .pl-#{$ii}{
+    padding-left: #{$iii}rem;
+  }
+  .pr-#{$ii}{
+    padding-right: #{$iii}rem;
+  }
+  .pt-#{$ii}-pc-small{
+    @include breakpoint(pc-small){
+      padding-top: #{$iii}rem;
+    }
+  }
+  .pb-#{$ii}-pc-small{
+    @include breakpoint(pc-small){
+      padding-bottom: #{$iii}rem;
+    }
+  }
+  .pl-#{$ii}-pc-small{
+    @include breakpoint(pc-small){
+      padding-left: #{$iii}rem;
+    }
+  }
+  .pr-#{$ii}-pc-small{
+    @include breakpoint(pc-small){
+      padding-right: #{$iii}rem;
+    }
+  }
+  .pt-#{$ii}-tablet{
+    @include breakpoint(tablet){
+      padding-top: #{$iii}rem;
+    }
+  }
+  .pb-#{$ii}-tablet{
+    @include breakpoint(tablet){
+      padding-bottom: #{$iii}rem;
+    }
+  }
+  .pl-#{$ii}-tablet{
+    @include breakpoint(tablet){
+      padding-left: #{$iii}rem;
+    }
+  }
+  .pr-#{$ii}-tablet{
+    @include breakpoint(tablet){
+      padding-right: #{$iii}rem;
+    }
+  }
+  .pt-#{$ii}-sp{
+    @include breakpoint(smartphone){
+      padding-top: #{$iii}rem;
+    }
+  }
+  .pb-#{$ii}-sp{
+    @include breakpoint(smartphone){
+      padding-bottom: #{$iii}rem;
+    }
+  }
+  .pl-#{$ii}-sp{
+    @include breakpoint(smartphone){
+      padding-left: #{$iii}rem;
+    }
+  }
+  .pr-#{$ii}-sp{
+    @include breakpoint(smartphone){
+      padding-right: #{$iii}rem;
+    }
+  }
+  .mt-#{$ii}{
+    margin-top: #{$iii}rem;
+  }
+  .mb-#{$ii}{
+    margin-bottom: #{$iii}rem;
+  }
+  .ml-#{$ii}{
+    margin-left: #{$iii}rem;
+  }
+  .mr-#{$ii}{
+    margin-right: #{$iii}rem;
+  }
+  .mt-#{$ii}-pc-small{
+    @include breakpoint(pc-small){
+      margin-top: #{$iii}rem;
+    }
+  }
+  .mb-#{$ii}-pc-small{
+    @include breakpoint(pc-small){
+      margin-bottom: #{$iii}rem;
+    }
+  }
+  .ml-#{$ii}-pc-small{
+    @include breakpoint(pc-small){
+      margin-left: #{$iii}rem;
+    }
+  }
+  .mr-#{$ii}-pc-small{
+    @include breakpoint(pc-small){
+      margin-right: #{$iii}rem;
+    }
+  }
+  .mt-#{$ii}-tablet{
+    @include breakpoint(tablet){
+      margin-top: #{$iii}rem;
+    }
+  }
+  .mb-#{$ii}-tablet{
+    @include breakpoint(tablet){
+      margin-bottom: #{$iii}rem;
+    }
+  }
+  .ml-#{$ii}-tablet{
+    @include breakpoint(tablet){
+      margin-left: #{$iii}rem;
+    }
+  }
+  .mr-#{$ii}-tablet{
+    @include breakpoint(tablet){
+      margin-right: #{$iii}rem;
+    }
+  }
+  .mt-#{$ii}-sp{
+    @include breakpoint(smartphone){
+      margin-top: #{$iii}rem;
+    }
+  }
+  .mb-#{$ii}-sp{
+    @include breakpoint(smartphone){
+      margin-bottom: #{$iii}rem;
+    }
+  }
+  .ml-#{$ii}-sp{
+    @include breakpoint(smartphone){
+      margin-left: #{$iii}rem;
+    }
+  }
+  .mr-#{$ii}-sp{
+    @include breakpoint(smartphone){
+      margin-right: #{$iii}rem;
+    }
+  }
+  .wrem-#{$ii}{
+    width: #{$iii}rem;
+  }
+  .wrem-#{$ii}-pc-small{
+    @include breakpoint(pc-small){
+      width: #{$iii}rem;
+    }
+  }
+  .wrem-#{$ii}-tablet{
+    @include breakpoint(tablet){
+      width: #{$iii}rem;
+    }
+  }
+  .wrem-#{$ii}-sp{
+    @include breakpoint(smartphone){
+      width: #{$iii}rem;
+    }
+  }
+  .w-100-minus-#{$ii}{
+    width: calc(100% - #{$iii}rem);
+  }
+  .w-100-minus-#{$ii}-pc-small{
+    @include breakpoint(pc-small){
+      width: calc(100% - #{$iii}rem);
+    }
+  }
+  .w-100-minus-#{$ii}-tablet{
+    @include breakpoint(tablet){
+      width: calc(100% - #{$iii}rem);
+    }
+  }
+  .w-100-minus-#{$ii}-sp{
+    @include breakpoint(smartphone){
+      width: calc(100% - #{$iii}rem);
+    }
+  }
+}
+.m0auto{
+  margin: 0 auto;
+}

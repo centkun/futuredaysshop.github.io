@@ -1,0 +1,27 @@
+.textcolor-bg{
+  color: var(--bgcolor);
+  a{
+    color: var(--bgcolor);
+    &.hover{
+      color: var(--bgcolor);
+    }
+  }
+}
+.textcolor-primary{
+  color: var(--primarycolor);
+  a{
+    color: var(--primarycolor);
+    &.hover{
+      color: var(--primarycolor);
+    }
+  }
+}
+.textcolor-primary-sub{
+  color: var(--primarysubcolor);
+  a{
+    color: var(--primarysubcolor);
+    &.hover{
+      color: var(--primarysubcolor);
+    }
+  }
+}

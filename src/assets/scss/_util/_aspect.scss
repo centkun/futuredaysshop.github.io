@@ -1,0 +1,46 @@
+.aspect-1-1{
+  aspect-ratio: 1/1;
+}
+.aspect-2-1{
+  aspect-ratio: 2/1;
+}
+.aspect-1_5-1{
+  aspect-ratio: 1.5/1;
+}
+.aspect-1-2_5 {
+  aspect-ratio: 1/2.5;
+}
+.aspect-1-2 {
+  aspect-ratio: 1/2;
+}
+.aspect-1-1_5 {
+  aspect-ratio: 1/1.5;
+}
+.aspect-16-9 {
+  aspect-ratio: 16/9;
+}
+.aspect-1-1-tablet{
+  @include breakpoint(tablet) {
+    aspect-ratio: 1/1;
+  }
+}
+.aspect-1-1-sp{
+  @include breakpoint(smartphone) {
+    aspect-ratio: 1/1;
+  }
+}
+.aspect-1-2-sp{
+  @include breakpoint(smartphone) {
+    aspect-ratio: 1/2;
+  }
+}
+.aspect-2-1-sp{
+  @include breakpoint(smartphone) {
+    aspect-ratio: 2/1;
+  }
+}
+.aspect-3-1-sp{
+  @include breakpoint(smartphone) {
+    aspect-ratio: 3/1;
+  }
+}

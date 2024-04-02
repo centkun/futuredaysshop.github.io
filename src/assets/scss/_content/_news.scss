@@ -1,0 +1,7 @@
+.article-carousel{
+  overflow: hidden;
+  &:before{
+    content: "swiper";
+    display: none;
+  }
+}

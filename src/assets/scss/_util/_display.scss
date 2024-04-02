@@ -1,0 +1,29 @@
+.display-none{
+  display: none !important;
+}
+.display-block{
+  display: block !important;
+}
+.display-inline-block{
+  display: inline-block !important;
+}
+.display-none-tablet{
+  @include breakpoint(tablet){
+    display: none !important;
+  }
+}
+.display-block-tablet{
+  @include breakpoint(tablet){
+    display: block !important;
+  }
+}
+.display-none-sp{
+  @include breakpoint(smartphone){
+    display: none !important;
+  }
+}
+.display-block-sp{
+  @include breakpoint(smartphone){
+    display: block !important;
+  }
+}

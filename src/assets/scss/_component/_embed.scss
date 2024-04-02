@@ -1,0 +1,56 @@
+iframe{
+  max-width: 100%;
+}
+.fitVids-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.embed{
+  @include textsize-small();
+  p{
+    margin-top: 1em;
+    &:first-child{
+      margin-top: 0;
+    }
+    a{
+      text-decoration: underline;
+      &.hover{
+        text-decoration: none;
+      }
+    }
+  }
+  .twitter-tweet,
+  blockquote,
+  iframe{
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+.instagram-media{
+  @include breakpoint(smartphone-small2){
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+.embed-apple-music{
+  iframe{
+    max-width: 100% !important;
+  }
+}
+.embed-google-forms{
+  @include radius();
+  border: solid 1px var(--primarycolor);
+  iframe{
+    width: 100%;
+    height: 800px;
+    max-height: 90vh;
+  }
+}

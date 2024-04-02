@@ -1,0 +1,72 @@
+$col: 5,10,14,15,16,20,25,30,33,35,40,45,50,55,60,65,66,70,75,80,85,90,95,100;
+
+@each $c in $col {
+  .w-#{$c} {
+    @if $c == 14 { $c: 14.444; }
+    @if $c == 16 { $c: 16.666; }
+    @if $c == 33 { $c: 33.333; }
+    @if $c == 66 { $c: 66.666; }
+    width: #{$c + '%'};
+  }
+}
+@each $c in $col {
+  .w-#{$c}-pc-small {
+    @include breakpoint(pc-small){
+      @if $c == 14 { $c: 14.444; }
+      @if $c == 16 { $c: 16.666; }
+      @if $c == 33 { $c: 33.333; }
+      @if $c == 66 { $c: 66.666; }
+      width: #{$c + '%'};
+    }
+  }
+}
+@each $c in $col {
+  .w-#{$c}-tablet {
+    @include breakpoint(tablet){
+      @if $c == 14 { $c: 14.444; }
+      @if $c == 16 { $c: 16.666; }
+      @if $c == 33 { $c: 33.333; }
+      @if $c == 66 { $c: 66.666; }
+      width: #{$c + '%'};
+    }
+  }
+}
+@each $c in $col {
+  .w-#{$c}-sp {
+    @include breakpoint(smartphone){
+      @if $c == 14 { $c: 14.444; }
+      @if $c == 16 { $c: 16.666; }
+      @if $c == 33 { $c: 33.333; }
+      @if $c == 66 { $c: 66.666; }
+      width: #{$c + '%'};
+    }
+  }
+}
+@each $c in $col {
+  .w-#{$c}-sp-small {
+    @include breakpoint(smartphone-small){
+      @if $c == 14 { $c: 14.444; }
+      @if $c == 16 { $c: 16.666; }
+      @if $c == 33 { $c: 33.333; }
+      @if $c == 66 { $c: 66.666; }
+      width: #{$c + '%'};
+    }
+  }
+}
+
+.w-aside{
+  width: 20rem;
+  @include breakpoint(portrait){
+    width: 100%;
+    margin-top: 5rem;
+  }
+}
+.w-content{
+  max-width: 60rem;
+  width: calc(100% - 20rem);
+  padding-right: 5rem;
+  @include breakpoint(portrait){
+    width: 100%;
+    padding-right: 0;
+  }
+}

@@ -1,0 +1,156 @@
+$radius: 16;
+$radius-small: 4;
+
+/*
+  radius
+*/
+@mixin radius {
+  border-radius: #{$radius}px;
+}
+@mixin radius-small {
+  border-radius: #{$radius-small}px;
+}
+@mixin radius-circle {
+  border-radius: 50%;
+}
+.radius{
+  @include radius;
+}
+.radius-top-left{
+  border-top-left-radius: #{$radius}px;
+}
+.radius-top-right{
+  border-top-right-radius: #{$radius}px;
+}
+.radius-bottom-left{
+  border-bottom-left-radius: #{$radius}px;
+}
+.radius-bottom-right{
+  border-bottom-right-radius: #{$radius}px;
+}
+
+/*
+  radius small
+*/
+.radius-small{
+  @include radius-small;
+}
+.radius-small-top-left{
+  border-top-left-radius: #{$radius-small}px;
+}
+.radius-small-top-right{
+  border-top-right-radius: #{$radius-small}px;
+}
+.radius-small-bottom-left{
+  border-bottom-left-radius: #{$radius-small}px;
+}
+.radius-small-bottom-right{
+  border-bottom-right-radius: #{$radius-small}px;
+}
+
+.radius-small-tablet{
+  @include breakpoint(tablet){
+    @include radius-small;
+  }
+}
+.radius-small-top-left-tablet{
+  @include breakpoint(tablet){
+    border-top-left-radius: #{$radius-small}px;
+  }
+}
+.radius-small-top-right-tablet{
+  @include breakpoint(tablet){
+    border-top-right-radius: #{$radius-small}px;
+  }
+}
+.radius-small-bottom-left-tablet{
+  @include breakpoint(tablet){
+    border-bottom-left-radius: #{$radius-small}px;
+  }
+}
+.radius-small-bottom-right-tablet{
+  @include breakpoint(tablet){
+    border-bottom-right-radius: #{$radius-small}px;
+  }
+}
+
+.radius-small-sp{
+  @include breakpoint(smartphone){
+    @include radius-small;
+  }
+}
+.radius-small-top-left-sp{
+  @include breakpoint(smartphone){
+    border-top-left-radius: #{$radius-small}px;
+  }
+}
+.radius-small-top-right-sp{
+  @include breakpoint(smartphone){
+    border-top-right-radius: #{$radius-small}px;
+  }
+}
+.radius-small-bottom-left-sp{
+  @include breakpoint(smartphone){
+    border-bottom-left-radius: #{$radius-small}px;
+  }
+}
+.radius-small-bottom-right-sp{
+  @include breakpoint(smartphone){
+    border-bottom-right-radius: #{$radius-small}px;
+  }
+}
+
+/*
+  no radius
+*/
+.no-radius-tablet{
+  @include breakpoint(tablet){
+    border-radius: 0;
+  }
+}
+.no-radius-top-left-tablet{
+  @include breakpoint(tablet){
+    border-top-left-radius: 0;
+  }
+}
+.no-radius-top-right-tablet{
+  @include breakpoint(tablet){
+    border-top-right-radius: 0;
+  }
+}
+.no-radius-bottom-left-tablet{
+  @include breakpoint(tablet){
+    border-bottom-left-radius: 0;
+  }
+}
+.no-radius-bottom-right-tablet{
+  @include breakpoint(tablet){
+    border-bottom-right-radius: 0;
+  }
+}
+
+.no-radius-sp{
+  @include breakpoint(smartphone){
+    border-radius: 0;
+  }
+}
+.no-radius-top-left-sp{
+  @include breakpoint(smartphone){
+    border-top-left-radius: 0;
+  }
+}
+.no-radius-top-right-sp{
+  @include breakpoint(smartphone){
+    border-top-right-radius: 0;
+  }
+}
+.no-radius-bottom-left-sp{
+  @include breakpoint(smartphone){
+    border-bottom-left-radius: 0;
+  }
+}
+.no-radius-bottom-right-sp{
+  @include breakpoint(smartphone){
+    border-bottom-right-radius: 0;
+  }
+}

@@ -1,0 +1,164 @@
+.flex{
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  &.is-break-tablet{
+    @include breakpoint(tablet){
+      display: block;
+    }
+  }
+  &.is-break-sp{
+    @include breakpoint(smartphone){
+      display: block;
+    }
+  }
+}
+.flex-tablet{
+  @include breakpoint(tablet){
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+  &.is-break-sp{
+    @include breakpoint(smartphone){
+      display: block;
+    }
+  }
+}
+.flex-sp{
+  @include breakpoint(smartphone){
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+}
+.is-flex-wrap-nowrap{
+  flex-wrap: nowrap;
+}
+.is-justify-content-center{
+  justify-content: center;
+}
+.is-justify-content-flex-end{
+  justify-content: flex-end;
+}
+.is-justify-content-space-between{
+  justify-content: space-between;
+}
+.is-align-items-center{
+  align-items: center;
+}
+.is-align-items-flex-end{
+  align-items: flex-end;
+}
+.is-flex-direction-row-reverse{
+  flex-direction: row-reverse;
+}
+.is-flex-direction-column{
+  flex-direction: column;
+}
+.is-flex-wrap-nowrap-tablet{
+  @include breakpoint(tablet){
+    flex-wrap: nowrap;
+  }
+}
+.is-justify-content-flex-start-tablet{
+  @include breakpoint(tablet){
+    justify-content: flex-start;
+  }
+}
+.is-justify-content-center-tablet{
+  @include breakpoint(tablet){
+    justify-content: center;
+  }
+}
+.is-justify-content-space-between-tablet{
+  @include breakpoint(tablet){
+    justify-content: space-between;
+  }
+}
+.is-align-items-flex-start-tablet{
+  @include breakpoint(tablet){
+    align-items: flex-start;
+  }
+}
+.is-flex-direction-column-tablet{
+  @include breakpoint(tablet){
+    flex-direction: column;
+  }
+}
+.is-flex-wrap-nowrap-sp{
+  @include breakpoint(smartphone){
+    flex-wrap: nowrap;
+  }
+}
+.is-align-items-center-sp{
+  @include breakpoint(smartphone){
+    align-items: center;
+  }
+}
+.is-flex-direction-column-sp{
+  @include breakpoint(smartphone){
+    flex-direction: column;
+  }
+}
+.is-justify-content-center-sp{
+  @include breakpoint(smartphone){
+    justify-content: center;
+  }
+}
+.is-justify-content-space-between-sp{
+  @include breakpoint(smartphone){
+    justify-content: space-between;
+  }
+}
+
+@for $i from 0 through 32 {
+  $ii: 0;
+  $iii: $i * 0.5;
+  @if $i == 0 {
+    $ii: 0;
+    $iii: 0;
+  } @else if $i == 1 {
+    $ii: 0_5;
+    $iii: 0.5;
+  } @else if $i % 2 == 0 {
+    $ii: calc($i / 2);
+  } @else {
+    $ii: #{floor(calc($i / 2))}_5;
+  }
+  .flex-grid-#{$ii}{
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin-left: -#{$iii}rem;
+    > *{
+      padding-left: #{$iii}rem;
+    }
+  }
+  .flex-grid-tablet-#{$ii}{
+    @include breakpoint(tablet){
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+      margin-left: -#{$iii}rem;
+    }
+    > *{
+      @include breakpoint(tablet){
+        padding-left: #{$iii}rem;
+      }
+    }
+  }
+  .flex-grid-mobile-#{$ii}{
+    @include breakpoint(smartphone){
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+      margin-left: -#{$iii}rem;
+    }
+    > *{
+      @include breakpoint(smartphone){
+        padding-left: #{$iii}rem;
+      }
+    }
+  }
+}

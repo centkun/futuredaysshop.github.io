@@ -1,0 +1,52 @@
+.teaser{
+  width: 100%;
+  height: 100dvh;
+  @include breakpoint(portrait){
+    height: auto;
+  }
+  .logo-teaser{
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30rem;
+    @include breakpoint(portrait){
+      width: 80%;
+    }
+    .circle{
+      animation: scale 1200ms $easeOutBack 1;
+    }
+  }
+  .description,
+  .image{
+    width: 50%;
+    @include breakpoint(portrait){
+      width: 100%;
+    }
+  }
+  .image{
+    height: 100%;
+    @include breakpoint(portrait){
+      height: auto;
+    }
+    img{
+      height: 100%;
+      @include breakpoint(portrait){
+        height: auto;
+      }
+    }
+  }
+  .description{
+    height: 100dvh;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 8rem;
+    @include breakpoint(portrait){
+      height: auto;
+      padding-top: 4rem;
+    }
+    .social-icon{
+      width: 1.5rem;
+    }
+  }
+}

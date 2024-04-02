@@ -1,0 +1,14 @@
+.share-element{
+  @include textsize-small;
+  display: flex;
+  align-items: center;
+  svg{
+    width: 20px;
+    @include breakpoint(smartphone){
+      width: 15px;
+    }
+  }
+  p{
+    margin-left: 5px;
+  }
+}

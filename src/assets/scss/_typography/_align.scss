@@ -1,0 +1,31 @@
+.textalign-center{
+  text-align: center;
+}
+.textalign-right{
+  text-align: right;
+}
+.textalign-center-tablet{
+  @include breakpoint(tablet){
+    text-align: center;
+  }
+}
+.textalign-right-tablet{
+  @include breakpoint(tablet){
+    text-align: right;
+  }
+}
+.textalign-left-sp{
+  @include breakpoint(smartphone){
+    text-align: left;
+  }
+}
+.textalign-center-sp{
+  @include breakpoint(smartphone){
+    text-align: center;
+  }
+}
+.textalign-right-sp{
+  @include breakpoint(smartphone){
+    text-align: right;
+  }
+}

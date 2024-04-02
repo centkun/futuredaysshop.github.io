@@ -1,0 +1,22 @@
+/*
+  font
+*/
+$font: 'Courier New', Courier, sans-serif;
+$font-bold: 'Courier New', Courier, sans-serif;
+
+@mixin font{
+  font-family: $font;
+  font-weight: 400;
+}
+@mixin font-bold{
+  font-family: $font-bold;
+  font-weight: 700;
+}
+.font{
+  @include font;
+}
+b,
+strong,
+.font-bold{
+  @include font-bold;
+}

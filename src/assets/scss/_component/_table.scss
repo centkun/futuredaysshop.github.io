@@ -1,0 +1,57 @@
+.table-container{
+  @include textsize-regular;
+  .table{
+    padding-bottom: 10px;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+  table {
+    min-width: 50rem;
+  }
+}
+table {
+  border-collapse: separate;
+  width: 100%;
+  border-bottom: solid 1px var(--primarysubcolor);
+  border-right: solid 1px var(--primarysubcolor);
+  thead {
+    background-color: var(--bgsubcolor);
+    tr{
+      th {
+        background-color: var(--primarysubcolor);
+        border-bottom: solid 1px var(--primarysubcolor);
+        border-left: solid 1px var(--bgcolor);
+        color: var(--bgcolor);
+        &:first-child{
+          border-left-color: var(--primarysubcolor);
+        }
+      }
+    }
+  }
+  tbody {
+    th {
+      background-color: var(--bgsubcolor);
+    }
+  }
+  th,
+  td {
+    white-space: nowrap;
+    padding: 0.8rem;
+    border-top: solid 1px var(--primarysubcolor);
+    border-left: solid 1px var(--primarysubcolor);
+  }
+}
+
+@media ( max-width: 50rem ) {
+  .table-container{
+    &:before{
+      content: "←　　Swipe　　→";
+      display: block;
+      text-align: center;
+      width: 100%;
+      font-size: 0.8rem;
+      color: var(--primarysubcolor);
+      margin-bottom: 1rem;
+    }
+  }
+}
